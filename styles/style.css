@@ -8,6 +8,49 @@
 
 body {
   background-color: #151515;
+  padding: 20vh 0 25vh 0;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.1;
+  background-image: url(../public/img/background.png);
+}
+
+h1 {
+  position: fixed;
+  top: 4vh;
+  width: 100vw;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  width: 70vw;
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flexItem {
+  width: 25%;
+  margin: 20px;
+}
+
+.flexItem p {
+  background-color: #d9488b;
+  padding: 5px;
+}
+
+.flexItem img {
+  width: 100%;
 }
 
 .navBar {

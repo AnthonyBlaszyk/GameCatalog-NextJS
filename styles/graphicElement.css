@@ -1,0 +1,39 @@
+.trait-v {
+  display: block;
+  width: 3px;
+  height: 50px;
+  background-color: #d9488b;
+}
+
+.trait-h {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #d9488b;
+}
+
+.tl {
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+}
+
+.bl {
+  position: fixed;
+  bottom: 15vh;
+  left: 5vw;
+}
+
+.tr {
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
+  transform: scale(-1, 1);
+}
+
+.br {
+  position: fixed;
+  bottom: 15vh;
+  right: 5vw;
+  transform: scale(-1, 1);
+}
