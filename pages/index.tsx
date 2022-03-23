@@ -1,5 +1,5 @@
-import cookie from "cookie";
 import { GetServerSideProps } from "next";
+import NavBar from "../component/NavBar";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   if (context.req.cookies.appSession === undefined) {
@@ -12,16 +12,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-export default function Home(props) {
+export default function Home(props: { cookie: string }) {
   return (
     <div>
-      <button>
-        {props.cookie ? (
-          <a href="/api/auth/logout">Logout</a>
-        ) : (
-          <a href="/api/auth/login">Login</a>
-        )}
-      </button>
+      <NavBar cookie={props.cookie}></NavBar>
     </div>
   );
 }
