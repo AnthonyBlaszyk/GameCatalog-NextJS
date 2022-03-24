@@ -24,25 +24,18 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const Home: React.FC<{ games; cookie: string }> = ({ games, cookie }) => {
   return (
     <div>
-      <div className="background"></div>
       <GraphicElements></GraphicElements>
       <h1>Game Catalog</h1>
       <div className="container">
-        {games.map((game) => {
-          return (
-            <div key={game._id} className="flexItem">
-              <Link href={`/games/${game.slug}`}>
-                <p>{game.name}</p>
-              </Link>
-
-              {game.cover === undefined ? (
-                <img src="" alt="" />
-              ) : (
-                <img src={game.cover.url} alt="" />
-              )}
-            </div>
-          );
-        })}
+        <Link href="/games">
+          <a>All games</a>
+        </Link>
+        <Link href="/genres">
+          <a>All genres</a>
+        </Link>
+        <Link href="/platforms">
+          <a>All platforms</a>
+        </Link>
       </div>
       <NavBar cookie={cookie}></NavBar>
     </div>

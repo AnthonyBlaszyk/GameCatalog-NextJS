@@ -1,4 +1,6 @@
 import { GetServerSideProps } from "next";
+import Link from "next/link";
+import { GraphicElements } from "../../component/GraphicElement";
 import NavBar from "../../component/NavBar";
 import { getDatabase } from "../../src/database";
 
@@ -43,8 +45,16 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const platformIndex = ({ platforms, cookie }) => {
   return (
     <div>
+      <GraphicElements></GraphicElements>
+      <h1>All platforms</h1>
       {platforms.map((platform) => {
-        return <p key={platform.name}>{platform.name}</p>;
+        return (
+          <div key={platform.name}>
+            <Link href={`/platforms/${platform.name}`} passHref>
+              <a>{platform.name}</a>
+            </Link>
+          </div>
+        );
       })}
       <NavBar cookie={cookie}></NavBar>
     </div>
