@@ -50,15 +50,20 @@ const genresIndex = ({ genres, cookie }) => {
     <div>
       <GraphicElements></GraphicElements>
       <h1>All genres</h1>
-      {genres.map((genre) => {
-        return (
-          <div key={genre}>
-            <Link href={`/genres/${genre}`} passHref>
-              <a>{genre}</a>
-            </Link>
-          </div>
-        );
-      })}
+      <div className="buttonList">
+        {genres.map((genre) => {
+          return (
+            <div key={genre}>
+              <div className="buttonDiv">
+                <Link href={`/genres/${genre}`} passHref>
+                  <a>{genre}</a>
+                </Link>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
       <NavBar cookie={cookie}></NavBar>
     </div>
   );

@@ -50,7 +50,7 @@ const platform: React.FC<{ genreName: string; genres; cookie: string }> = ({
           return (
             <div key={game._id} className="flexItem">
               <Link href={`/games/${game.slug}`} passHref>
-                <p>{game.name}</p>
+                <a>{game.name}</a>
               </Link>
 
               {game.cover === undefined ? (

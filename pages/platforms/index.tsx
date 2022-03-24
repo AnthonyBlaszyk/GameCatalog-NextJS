@@ -47,15 +47,19 @@ const platformIndex = ({ platforms, cookie }) => {
     <div>
       <GraphicElements></GraphicElements>
       <h1>All platforms</h1>
-      {platforms.map((platform) => {
-        return (
-          <div key={platform.name}>
-            <Link href={`/platforms/${platform.name}`} passHref>
-              <a>{platform.name}</a>
-            </Link>
-          </div>
-        );
-      })}
+      <div className="buttonList">
+        {platforms.map((platform) => {
+          return (
+            <div key={platform.name}>
+              <div className="buttonDiv">
+                <Link href={`/platforms/${platform.name}`} passHref>
+                  <a>{platform.name}</a>
+                </Link>
+              </div>
+            </div>
+          );
+        })}
+      </div>
       <NavBar cookie={cookie}></NavBar>
     </div>
   );

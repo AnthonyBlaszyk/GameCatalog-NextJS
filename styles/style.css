@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
 }
 
 body {
@@ -52,6 +51,45 @@ h1 {
 
 .flexItem img {
   width: 100%;
+}
+
+.buttonList {
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttonList > div {
+  width: 25%;
+  margin: 20px;
+}
+
+.buttonList .buttonDiv {
+  width: 100%;
+  background-color: #d9488b;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: white 5px 5px;
+}
+
+.buttonList .buttonDiv:hover {
+  background-color: white;
+  color: #d9488b;
+  box-shadow: #d9488b 10px 10px;
+  cursor: pointer;
+}
+
+.buttonList .buttonDiv a {
+  text-decoration: none;
+  color: white;
+}
+
+.buttonList .buttonDiv:hover a {
+  text-decoration: none;
+  color: #d9488b;
 }
 
 .navBar {
