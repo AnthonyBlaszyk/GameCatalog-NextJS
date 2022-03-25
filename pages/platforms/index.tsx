@@ -51,11 +51,11 @@ const platformIndex = ({ platforms, cookie }) => {
         {platforms.map((platform) => {
           return (
             <div key={platform.name}>
-              <div className="buttonDiv">
-                <Link href={`/platforms/${platform.name}`} passHref>
+              <Link href={`/platforms/${platform.name}`} passHref>
+                <div className="buttonDiv">
                   <a>{platform.name}</a>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
           );
         })}

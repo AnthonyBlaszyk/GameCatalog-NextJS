@@ -54,11 +54,11 @@ const genresIndex = ({ genres, cookie }) => {
         {genres.map((genre) => {
           return (
             <div key={genre}>
-              <div className="buttonDiv">
-                <Link href={`/genres/${genre}`} passHref>
+              <Link href={`/genres/${genre}`} passHref>
+                <div className="buttonDiv">
                   <a>{genre}</a>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
           );
         })}
